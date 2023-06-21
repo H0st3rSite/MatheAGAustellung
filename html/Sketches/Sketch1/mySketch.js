@@ -8,4 +8,4 @@ function draw() {
 	var rectHeight = 150; // Rect height
 	// Both calcs to bring rect to middle of canvas
 	rect((windowWidth / 2) - (rectWidth / 2), (windowHeight / 2) - (rectWidth / 2), rectHeight, rectWidth);
-}	
+}

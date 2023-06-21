@@ -1,54 +1,251 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Extra | Zeichnen mit Mathe und Code</title>
-    <base href="../">
-    <link rel="stylesheet" href="./stylesheets/style.css">
-    <script src="./code/main.js"></script>
-    <!-- Bootstrap CSS - DO NOT CHANGE! -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extra | Zeichnen mit Mathe und Code</title>
+  <base href="../">
+  <script src="/code/main.js"></script>
+  <style>
+    p {
+      font-weight: bolder;
+    }
+
+    .with-border {
+      border-style: solid;
+    }
+  </style>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <!-- Bootstrap CSS - DO NOT CHANGE! -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
+
 <body>
-    <!-- The navbar - easily copied from Bootstrap -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/MainWebsite/index.html">Zeichnen mit Mathe</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="/MainWebsite/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/MainWebsite/learn.html">Lernen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/MainWebsite/extra.html">Extra</a>
-            </li>
+  <!-- The navbar - easily copied from Bootstrap -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Zeichnen mit Mathe</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar- with-bordercollapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/learn.html">Lernen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/html/extra.html">Extra</a>
+          </li>
+          <!--
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Andere Canvas</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/MainWebsite/AndereCanvas/site1.html">Faszinierende Animationen</a></li>
-                <li><a class="dropdown-item" href="/MainWebsite/AndereCanvas/site2.html">Andere geometrische Formen</a></li>
-                <li><a class="dropdown-item" href="/MainWebsite/AndereCanvas/site3.html">Sehr mathematische Canvas</a></li>
+                <li><a class="dropdown-item" href="/html/AndereCanvas/site1.html">Faszinierende Animationen</a></li>
+                <li><a class="dropdown-item" href="/html/AndereCanvas/site2.html">Andere geometrische Formen</a></li>
+                <li><a class="dropdown-item" href="/html/AndereCanvas/site3.html">Sehr mathematische Canvas</a></li>
               </ul>
             </li>
-          </ul>
+          -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- More informatiom text here -->
+  <main>
+    <div class="container place-holder">
+      <h1 class="text-center">Ein Projekt der Mathe-AG mit Herr Van den Berge</>
+    </div>
+
+    <div class="container place-holder">
+      <h2>Code der Sketches:</h2>
+      <div class="container text-center place-holder">
+        <div class="row">
+          <div class="col place-holder with-border">
+            <p>Einfaches Quadrat (Sketch 1)</p>
+            function setup() {
+            createCanvas(windowWidth - 10, windowHeight - 10); // - 10 to not have scrollbars
+            background(100); // grey bg
+            }
+
+            function draw() {
+            var rectWidth = 150; // Rect width
+            var rectHeight = 150; // Rect height
+            // Both calcs to bring rect to middle of canvas
+            rect((windowWidth / 2) - (rectWidth / 2), (windowHeight / 2) - (rectWidth / 2), rectHeight, rectWidth);
+            }
+          </div>
+          <div class="col place-holder with-border">
+            <p>Mehrere Quadrate (Sketch 2)</p>
+            <pre>
+                    function setup() {
+                      createCanvas(windowWidth - 10, windowHeight - 10);
+                      background(100);
+                    }
+                    
+                    function draw() {
+                      rect(20, 60, 40, 40);
+                      rect(220, 250, 60, 60);
+                      rect(200, 200, 30, 30);
+                      rect(100, 160, 90, 90);
+                      rect(90, 300, 10, 10);
+                    }
+                  </pre>
+          </div>
+          <div class="col place-holder with-border">
+            <p>Verschiende Quadrate und Formen (Sketch 3)</p>
+            <pre>
+                    function setup() {
+                      createCanvas(windowWidth - 10, windowHeight - 10);
+                      background(100);
+                    }
+                    
+                    function draw() {
+                      var rectNum = 10;
+                      //var rectSize = Math.random() * 100; // Maybe use for random numbers (for size)
+                      for(i = 0; i < rectNum + 100; i += 10) {
+                        rect(i, i, i, i);
+                    
+                      }
+                    
+                      for(x = 0; x < rectNum + 100; x += 10) {
+                        rect(100, x, x, x);
+                      }
+                    
+                      for(y = 0; y < rectNum + 100; y += 10) {
+                        rect(y + 90, y + 90, y, y);
+                      }
+                    
+                      for(z = 0; z < windowWidth - 70; z += 10) {
+                        rect(z, 240, 50, 50);
+                      }
+                    
+                      rect(100, 300, 80, 80);
+                      rect(30, 280, 80, 80);
+                    }
+                  </pre>
+          </div>
         </div>
       </div>
-    </nav>
 
-    <!-- More informatiom text here -->
-    <p class="text-center">Ein Projekt der Mathe-AG mit Herr Van den Berge</p>
+      <div class="container text-center place-holder">
+        <div class="row">
+          <div class="col place-holder with-border">
+            <p>Bewegende Quadrate (Sketch 4)</p>
+            <pre>
+                    function setup(){
+                      createCanvas(windowWidth - 10, windowHeight - 10);
+                    }
+                    
+                    function draw() {
+                      background(100);
+                      rectMode(CENTER);
+                      translate(windowWidth / 2, windowHeight / 2);
+                      translate(p5.Vector.fromAngle(millis() / 1000, 40));
+                      rect(0, 0, 50, 50);
+                    
+                      rect(-50, -50, 25, 25);
+                      translate(0, 0);
+                      translate(windowWidth / 2, windowHeight / 2);
+                      translate(p5.Vector.fromAngle(millis() / 100, 10));
+                      rect(0, 0, 10, 10);
+                    }
+                  </pre>
+          </div>
+          <div class="col place-holder with-border">
+            <p>Komplexe Animation (Sketch 5)</p>
+            <pre>
+                    let sit = [1,-1]
+                    function setup() {
+                      createCanvas(windowHeight, windowHeight);
+                      background(0);
+                      frameRate(20);
+                    }
 
-    <!-- Bootstrap script - DO NOT CHANGE! -->  
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+                    function draw() {
+                      
+                      translate(width / 2, height / 2)
+                      background(0);
+                      for(i = 0; i < sit.length; i ++){
+                        for(j = 0; j < sit.length; j ++){
+                          for(x = 0; x < width / 2; x += width / 2 / frameCount){
+                            strokeWeight(1)
+                            stroke(255);
+                            line(x * sit[i], 0, 0, map(x, 0, width / 2, width / 2, 0) * sit[j]);
+                          }
+                        }
+                      }
+                    }
+                  </pre>
+          </div>
+          <div class="col place-holder with-border">
+            <p>Komplexe Animation (Sketch 6)</p>
+            <pre>
+              let scal = 700;
+let range = 1;
+let points = [];
+let colors; 
+
+
+function setup() {
+	createCanvas(windowWidth - 10, windowHeight - 10);
+	background(0);
+	colors = [color(108, 58, 92),color(189, 210, 166),color(204, 75, 194),color(225, 111, 124),color(120, 111, 89)]
+	// for(let i = 0; i < 100; i ++) points.push(new Particle());
+}
+
+function draw() {
+	background(0,0,0,0.2)
+	for(let i of points) i.move();
+	for(let i of points) i.draw();
+	
+	
+	points = points.filter(({v})=>{
+		return !(v.x > width || v.x < 0 || v.y > height || v.y < 0)
+	})
+	
+	for(let i = 0; i < 1000 - points.length; i ++) points.push(new Particle())
+	
+}
+
+class Particle{
+	constructor(){
+		this.v = createVector(random(width),random(height))
+		this.c = random(colors)
+		this.time = 0;
+	}
+	move(){
+		const n = noise(this.v.x / scal,this.v.y / scal) * TWO_PI * 5
+		this.v.add(cos(n) * range,sin(n) * range)
+		this.time += 0.5;
+	}
+	draw(){
+		noStroke();
+		fill(this.c);
+		ellipse(this.v.x,this.v.y,4,4)
+	}
+	
+}
+
+            </pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bootstrap script - DO NOT CHANGE! -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
