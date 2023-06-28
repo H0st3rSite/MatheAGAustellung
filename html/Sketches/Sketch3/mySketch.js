@@ -5,7 +5,7 @@ function setup() {
 
 function draw() {
 	var rectNum = 10;
-	//var rectSize = Math.random() * 100; // Maybe use for random numbers (for size)
+	
 	for(i = 0; i < rectNum + 100; i += 10) {
 		rect(i, i, i, i);
 

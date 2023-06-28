@@ -8,7 +8,7 @@ function setup() {
 	createCanvas(windowWidth - 10, windowHeight - 10);
 	background(0);
 	colors = [color(108, 58, 92),color(189, 210, 166),color(204, 75, 194),color(225, 111, 124),color(120, 111, 89)]
-	// for(let i = 0; i < 100; i ++) points.push(new Particle());
+	
 }
 
 function draw() {
