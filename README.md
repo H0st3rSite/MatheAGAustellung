@@ -1,1 +1,1 @@
-Website for Mathe AG Austellung
+Webseite für Mathe AG Austellung
