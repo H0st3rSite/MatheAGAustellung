@@ -59,15 +59,15 @@
           <div class="col place-holder with-border">
             <p>Einfaches Quadrat (Sketch 1)</p>
             function setup() {
-            createCanvas(windowWidth - 10, windowHeight - 10); // - 10 to not have scrollbars
-            background(100); // grey bg
+              createCanvas(windowWidth - 10, windowHeight - 10); 
+              background(100); 
             }
-
+            
             function draw() {
-            var rectWidth = 150; // Rect width
-            var rectHeight = 150; // Rect height
-            // Both calcs to bring rect to middle of canvas
-            rect((windowWidth / 2) - (rectWidth / 2), (windowHeight / 2) - (rectWidth / 2), rectHeight, rectWidth);
+              var rectWidth = 150; 
+              var rectHeight = 150; 
+              
+              rect((windowWidth / 2) - (rectWidth / 2), (windowHeight / 2) - (rectWidth / 2), rectHeight, rectWidth);
             }
           </div>
           <div class="col place-holder with-border">
@@ -90,34 +90,34 @@
           <div class="col place-holder with-border">
             <p>Verschiende Quadrate und Formen (Sketch 3)</p>
             <pre>
-                    function setup() {
-                      createCanvas(windowWidth - 10, windowHeight - 10);
-                      background(100);
-                    }
-                    
-                    function draw() {
-                      var rectNum = 10;
-                      //var rectSize = Math.random() * 100; // Maybe use for random numbers (for size)
-                      for(i = 0; i < rectNum + 100; i += 10) {
-                        rect(i, i, i, i);
-                    
-                      }
-                    
-                      for(x = 0; x < rectNum + 100; x += 10) {
-                        rect(100, x, x, x);
-                      }
-                    
-                      for(y = 0; y < rectNum + 100; y += 10) {
-                        rect(y + 90, y + 90, y, y);
-                      }
-                    
-                      for(z = 0; z < windowWidth - 70; z += 10) {
-                        rect(z, 240, 50, 50);
-                      }
-                    
-                      rect(100, 300, 80, 80);
-                      rect(30, 280, 80, 80);
-                    }
+              function setup() {
+                createCanvas(windowWidth - 10, windowHeight - 10);
+                background(100);
+              }
+              
+              function draw() {
+                var rectNum = 10;
+                
+                for(i = 0; i < rectNum + 100; i += 10) {
+                  rect(i, i, i, i);
+              
+                }
+              
+                for(x = 0; x < rectNum + 100; x += 10) {
+                  rect(100, x, x, x);
+                }
+              
+                for(y = 0; y < rectNum + 100; y += 10) {
+                  rect(y + 90, y + 90, y, y);
+                }
+              
+                for(z = 0; z < windowWidth - 70; z += 10) {
+                  rect(z, 240, 50, 50);
+                }
+              
+                rect(100, 300, 80, 80);
+                rect(30, 280, 80, 80);
+              }
                   </pre>
           </div>
         </div>
